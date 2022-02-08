@@ -175,6 +175,9 @@ pre code {
   font-size: 12pt;
 }
 </style>
+<div id="this-is-for-tutorial-of-stat-3008-spring-2022" class="section level3">
+<h3>This is for tutorial of STAT 3008, spring 2022<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></h3>
+</div>
 <div id="r-installation" class="section level2">
 <h2>R installation</h2>
 <p>R is available for Linux, <a href="https://cran.r-project.org/bin/macosx/">MacOS</a>, and <a href="https://cran.r-project.org/bin/windows/base/">Windows</a>.</p>
@@ -321,7 +324,8 @@ G[3,2] # (3,2) entry: 8</code></pre>
 }</code></pre>
 <p>Inside the function body, you could use syntax like if, if…else, for, while, break, next, return to construct your function.</p>
 <pre class="r"><code>my_add &lt;- function(x, y){
-    return(x+y)
+    z &lt;- x+y
+    return(z)
 }
 my_add(3,4)</code></pre>
 <pre><code>## [1] 7</code></pre>
@@ -329,17 +333,17 @@ my_add(3,4)</code></pre>
 <div id="regression" class="section level3">
 <h3>Regression</h3>
 <p>The data set consists of variables blood pressure, age, weight and resting pulse rate. (1) Fit a linear regression model for blood pressure on age, weight and resting pulse rate. (2) Find the residual sum of squares RSS. (3) Find the coefficient of determination R2. (4) Test whether the effect of resting pulse rate is significant by constructing an ANOVA table.</p>
-<pre class="r"><code>dat2=read.csv(“BloodPressure.csv”)
+<pre class="r"><code>dat2=read.csv(&quot;BloodPressure.csv&quot;)
 y=dat2$Blood.pressure # extract the variables
 x1=dat2$Age
 x2=dat2$Weight
 x3=dat2$Pulse
-fit=lm(y∼ x1+x2+x3) # fit a linear model
+fit=lm(y ~ x1+x2+x3) # fit a linear model
 summary(fit) # summary of the model
 rss=sum(fit$residuals∧2)
 rss
 summary(fit)$r.squared
-fit2=lm(y∼ x1+x2) # a new model without x3
+fit2=lm(y ~ x1+x2) # a new model without x3
 anova(fit2,fit)</code></pre>
 </div>
 </div>
@@ -360,6 +364,12 @@ sum((u-ubar)∧2)/ (length(u)-1)</code></pre>
 <ol start="3" style="list-style-type: lower-alpha">
 <li><p>Show that applying the mean and var functions on u would provide the same results as in part (b).</p></li>
 <li><p>Based on the results in(a), construct the matrix A in R with dimension 3*6.</p></li>
+</ol>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Thanks for previous TA’s resources. This file refers to Ms. YIN Jie’s tutorial notes in fall, 2021<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
 
