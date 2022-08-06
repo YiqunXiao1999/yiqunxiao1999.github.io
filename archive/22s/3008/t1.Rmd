@@ -10,7 +10,7 @@ output: html_document
 }
 </style>
 
-### This is for tutorial of STAT 3008, spring 2022^[Thanks for previous TA's resources. This file refers to Ms. YIN Jie's tutorial notes in fall, 2021]
+### This is for tutorial 1 of STAT 3008, spring 2022^[Thanks for previous TA's resources. This file refers to Ms. YIN Jie's tutorial notes in fall, 2021]
 
 ## R installation
 
